@@ -1,0 +1,28 @@
+.nav {
+    grid-area: nav;
+    background-color: #757575;;
+}
+
+.nav ul {
+    padding: 0 0 0 20px;
+}
+
+.item {
+    list-style: none;
+    color: #fff;
+}
+
+.item a {
+    text-decoration: none;
+    color: #fff;
+    transition: all .5s ease-in;
+    cursor: pointer;
+}
+
+.item a:hover {
+    opacity: .5;
+}
+
+.item a.active {
+    color: #26a69a;
+}
