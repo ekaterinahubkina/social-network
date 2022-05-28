@@ -1,0 +1,29 @@
+.likeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 30px;
+}
+
+.likeContainer span {
+    font-size: 12px;
+}
+
+.likeButton {
+    width: 15px;
+    height: 12px;
+    border: none;
+    background-color: transparent;
+    background-image: url('../../../../images/like-icon.svg');
+    background-repeat: no-repeat;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.likeButton:hover {
+    opacity: .7;
+}
+
+.likeButton_active {
+    background-image: url('../../../../images/like-active-icon.svg');
+}

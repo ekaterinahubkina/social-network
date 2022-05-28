@@ -1,14 +1,16 @@
 import React from "react";
+import AddNewPostForm from "../AddNewPostForm/AddNewPostForm";
 import styles from './MyPosts.module.css';
 import Post from "./Post/Post";
 
-const MyPosts = () => {
+const MyPosts = (props) => {
     return (
         <section className={styles.myPosts}>
-            <h1>My Posts</h1>
-            <Post title='My first post' likeCount='1' />
-            <Post title='My second post' likeCount='2' />
-            <Post title='My third post' likeCount='3' />
+            <h2>My Posts</h2>
+            <AddNewPostForm addPost={props.addPost} />
+            {props.state.posts.map((post) => (
+                <Post key={post.id} title={post.message} likeCount={post.likesCount} />
+            ))}
         </section>
     );
 }

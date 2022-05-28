@@ -1,0 +1,5 @@
+.wallpaper img {
+  max-height: 150px;
+  width: 100%;
+  object-fit: cover;
+}

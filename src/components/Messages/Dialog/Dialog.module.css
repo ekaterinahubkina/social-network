@@ -1,0 +1,13 @@
+.dialog__link {
+    text-decoration: none;
+    color: darkgray;
+    transition: all .4s ease-in;
+}
+
+.dialog__link:hover {
+    opacity: .8;
+}
+
+.dialog__link_active {
+color: black;
+}

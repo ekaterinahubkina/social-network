@@ -1,0 +1,13 @@
+.form {
+    max-width: 50%;
+    flex-direction: column;
+}
+
+.form__textarea {
+    width: 100%;
+    min-height: 100px;
+}
+
+.form__button {
+    
+}
