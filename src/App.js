@@ -12,8 +12,10 @@ function App(props) {
       <Navbar />
       <div className='content'>
         <Routes>
-          <Route path='profile' element={<Profile state={props.state.profilePage} addPost={props.addPost} />} />
-          <Route path='messages/*' element={<Messages state={props.state.messagesPage} />} />
+          <Route path='profile' element={<Profile state={props.state.profilePage}
+            addPost={props.addPost} updateNewPostText={props.updateNewPostText} />} />
+          <Route path='messages/*' element={<Messages state={props.state.messagesPage}
+            addNewMessage={props.addNewMessage} updateNewMessageText={props.updateNewMessageText} />} />
         </Routes>
       </div>
     </div>

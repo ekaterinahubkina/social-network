@@ -7,7 +7,7 @@ const MyPosts = (props) => {
     return (
         <section className={styles.myPosts}>
             <h2>My Posts</h2>
-            <AddNewPostForm addPost={props.addPost} />
+            <AddNewPostForm state={props.state} addPost={props.addPost} updateNewPostText={props.updateNewPostText} />
             {props.state.posts.map((post) => (
                 <Post key={post.id} title={post.message} likeCount={post.likesCount} />
             ))}

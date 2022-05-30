@@ -1,6 +1,7 @@
 import React from "react";
 import Dialog from "./Dialog/Dialog";
 import Message from "./Message/Message";
+import MessageForm from "./MessageForm/MessageForm";
 import styles from './Messages.module.css';
 
 const Messages = (props) => {
@@ -18,6 +19,7 @@ const Messages = (props) => {
                 {props.state.messages.map((message) => (
                     <Message key={message.id} message={message.message} />
                 ))}
+                <MessageForm state={props.state} addNewMessage={props.addNewMessage} updateNewMessageText={props.updateNewMessageText} />
             </div>
         </div>
     );

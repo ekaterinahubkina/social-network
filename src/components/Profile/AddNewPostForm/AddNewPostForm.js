@@ -7,13 +7,18 @@ const AddNewPostForm = (props) => {
 
     const handleAddNewPost = (event) => {
         event.preventDefault();
-        const text = postTextRef.current.value;
-        props.addPost(text);
-        postTextRef.current.value = '';
+        props.addPost();
     }
+
+    const handleChange = () => {
+        const text = postTextRef.current.value;
+        props.updateNewPostText(text);
+    }
+
     return (
         <form className={styles.form}>
-            <textarea ref={postTextRef} className={styles.form__textarea}></textarea>
+            <textarea ref={postTextRef} className={styles.form__textarea}
+                value={props.state.newPostText} onChange={handleChange} />
             <button className={styles.form__button} onClick={handleAddNewPost}>Add post</button>
         </form>
     )

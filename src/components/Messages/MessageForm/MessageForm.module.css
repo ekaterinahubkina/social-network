@@ -1,0 +1,12 @@
+.form {
+    width: 100%;
+    display: flex;
+}
+
+.form__textarea {
+    width: 90%;
+}
+
+.form__button {
+    width: 10%;
+}
