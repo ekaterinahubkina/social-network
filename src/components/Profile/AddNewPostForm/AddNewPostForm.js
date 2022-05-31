@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import styles from './AddNewPostForm.module.css';
+import { addPostActionCreator, updateNewPostText } from '../../../redux/state';
 
 const AddNewPostForm = (props) => {
 
@@ -7,12 +8,12 @@ const AddNewPostForm = (props) => {
 
     const handleAddNewPost = (event) => {
         event.preventDefault();
-        props.addPost();
+        props.dispatch(addPostActionCreator());
     }
 
     const handleChange = () => {
         const text = postTextRef.current.value;
-        props.updateNewPostText(text);
+        props.dispatch(updateNewPostText(text));
     }
 
     return (

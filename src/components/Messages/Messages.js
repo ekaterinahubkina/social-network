@@ -19,7 +19,7 @@ const Messages = (props) => {
                 {props.state.messages.map((message) => (
                     <Message key={message.id} message={message.message} />
                 ))}
-                <MessageForm state={props.state} addNewMessage={props.addNewMessage} updateNewMessageText={props.updateNewMessageText} />
+                <MessageForm state={props.state} dispatch={props.dispatch} />
             </div>
         </div>
     );
